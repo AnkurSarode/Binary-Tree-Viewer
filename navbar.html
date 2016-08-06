@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--CSS-->
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <link rel="stylesheet" href="css/tree.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <!--JS-->
+    <script src="js/jquery.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <script src="js/tree.js"></script>
+    <script type="text/javascript" src="js/jquery.connectingLine.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-1.10.4.custom.min.js"></script>
+    
+  </head>
+    <style>
+        body {
+            width:100vw;
+            overflow-x:hidden;
+        }
+    </style>
+
+    
+
+  <body class="">
+
+ <br />
+      <br />
+      <div class="lines">
+
+      </div>
+  <div class="row">
+      <div class="col m9 l9 push-m1 push-l1" style="margin-left:5vw;">
+      <div class="node">
+          120
+      </div>
+          <div class="row children">
+           <div class="left-node col m6 l6">
+               <div class="node">
+                    100
+                </div>
+               <div class="row children">
+           <div class="left-node col m6 l6">
+               <div class="node">
+                    90
+                </div>
+           </div>
+           <div class="right-node col m6 l6 pull-l1">
+               <div class="node">
+                    110
+               </div>
+           </div>
+       </div>
+           </div>
+           <div class="right-node col m6 l6 pull-l1">
+               <div class="node">
+                    190
+               </div>
+               <div class="row children">
+           <div class="left-node col m6 l6">
+               <div class="node">
+                    140
+                </div>
+           </div>
+           <div class="right-node col m6 l6 pull-l1">
+               <div class="node">
+                    250
+               </div>
+           </div>
+       </div>
+           </div>
+       </div>
+     </div>
+
+  </div>
+
+
+
+  </body>
+    <script>
+        var mySVG = $('body').connect();
+        mySVG.drawLine({
+            left_node: '.node1',
+            right_node: '.node2',
+            horizantal_gap: 10,
+            error: true,
+            width: 1
+        });
+        $(".node1").draggable({
+            drag: function (event, ui) { mySVG.redrawLines(); }
+        });
+        $(".node2").draggable({
+            drag: function (event, ui) { mySVG.redrawLines(); }
+        });
+    </script>
+</HTML>

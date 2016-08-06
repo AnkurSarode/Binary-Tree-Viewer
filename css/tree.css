@@ -1,0 +1,52 @@
+body {
+    background:#303f9f;
+}
+.node
+{
+  border-radius:100%;
+  height:80px;
+  width:80px;
+  background:white;
+  position:relative;
+  left:40%;
+  cursor:pointer;
+  text-align:center;
+  padding-top:28px;
+  transition: 0.3s all;
+  border: 3px solid #607d8b;
+  color:#303f9f;
+  font-weight:bold;
+}
+.node:hover {
+    transform:scale(1.2);
+    transition: 0.3s all;
+}
+.add-node .add button{
+    outline:none;
+    border:none;
+    background: red;
+}
+.children {
+    position:relative;
+    display:none;
+}
+.left-node {
+     position:relative;
+    top:100px;
+     height:100px;
+  width:100px;
+}
+.right-node {
+   position:relative;
+   top:100px;
+   height:100px;
+    width:100px;
+}
+
+.display {
+    display:block;
+}
+
+.line {
+    position:absolute;
+}
